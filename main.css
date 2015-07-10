@@ -11,6 +11,10 @@ html,body{
     line-height: 150%;
     color:darkgrey;
 }
+a{
+    color:grey;
+    text-decoration: none;
+}
 
 h1{
     font-weight: 400;
@@ -97,7 +101,17 @@ input[type="submit"]:hover{
 .container{
     max-width:62.5em;
     margin:2em auto;
+    
+}
+
+.box{
     border:1px solid lightblue;
+}
+
+small{
+    display: block;
+    text-align: center;
+    font-size:0.75rem;
 }
 #time{
     font-size:0.75rem;
