@@ -8,10 +8,8 @@ $(function(){
             postData    = {};
 
         if (!isNaN(num) && num > 0){
-            form
-                .addClass('loading')
-                .find('input')
-                .prop('disabled',true);
+
+            setFormState(form, true);
 
             output
                 .empty()
@@ -29,20 +27,31 @@ $(function(){
                     var dtStop  = new Date(),
                         dtDiff  = (dtStop.getTime() - dtStart.getTime())/1000;
 
-                    form
-                        .removeClass()
-                        .find('input')
-                        .prop('disabled',false);
+                    setFormState(form, false);
 
                     output
                         .html(response)
                         .addClass('show');
 
                     $('#time').text('Finished in ' + dtDiff + ' seconds');
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    setFormState(form, false);
+
+                    output
+                        .html(jqXHR, textStatus,errorThrown)
+                        .addClass('show');
                 }
             });
         }
 
         return false;
     });
+
+    function setFormState(frm, bFlag){
+        frm
+            .removeClass()
+            .find('input')
+            .prop('disabled',bF);
+    }
 });
