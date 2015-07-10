@@ -39,7 +39,7 @@ $(function(){
                     setFormState(form, false);
 
                     output
-                        .html(jqXHR, textStatus,errorThrown)
+                        .html(jqXHR + ' ' + textStatus + ' ' + errorThrown)
                         .addClass('show');
                 }
             });
@@ -50,8 +50,8 @@ $(function(){
 
     function setFormState(frm, bFlag){
         frm
-            .removeClass()
+            .toggleClass('loading', bFlag)
             .find('input')
-            .prop('disabled',bF);
+            .prop('disabled',bFlag);
     }
 });
