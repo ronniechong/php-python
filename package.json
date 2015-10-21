@@ -1,0 +1,25 @@
+{
+  "name": "php-python",
+  "version": "1.0.0",
+  "description": "This is my first attempt to use Heroku to host a Python script app.",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronniechong/php-python.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronniechong/php-python/issues"
+  },
+  "homepage": "https://github.com/ronniechong/php-python#readme",
+  "devDependencies": {
+    "grunt-jasmine-runner": "^0.6.0"
+  }
+}
